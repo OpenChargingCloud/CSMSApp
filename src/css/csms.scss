@@ -1,0 +1,297 @@
+
+html {
+
+    body {
+
+        font-family: Arial, Helvetica, sans-serif;
+
+        #frame {
+
+            display:            flex;
+            flex-direction:     column;
+
+            #top {
+                font-family:        Arial, Helvetica, sans-serif;
+            }
+
+            #bottom {
+
+                display:            flex;
+                flex-direction:     row;
+
+                #left {
+
+                    width: 50%;
+
+                    #logView {
+
+                        overflow: auto;
+
+                        span {
+                            color: blue;
+                        }
+
+                        span.error {
+                            color: red;
+                        }
+
+                    }
+
+                    #logView > p {
+                        overflow-wrap: break-word;
+                    }
+
+                }
+
+                #right {
+
+                    width: 50%;
+
+                    #CSMS {
+
+                        padding:            2vh 1vw;
+                        background-color:   rgb(214, 214, 214);
+                        margin-bottom:      2vh;
+                        border-radius:      8px;
+
+                        .properties {
+            
+                            display:            table;
+                            width:              calc(100% - 14px);
+                            margin-left:        10px;
+
+                            .collection {
+
+                                margin-left:        20px;
+
+                                .properties {
+                                    display:            block;
+                                }
+
+                            }
+
+                            .row {
+
+                                display:            table-row;
+
+                                .key {
+                                    display:            table-cell;
+                                    padding-right:      20px;
+                                    white-space:        nowrap;
+                                }
+
+                                .value {
+
+                                    display:            table-cell;
+                                    width:              100%;
+
+                                    input {
+                                        border:             0;
+                                        border-radius:      4px;
+                                        margin-bottom:      2px;
+                                        padding:            4px 6px 4px 10px;
+                                        width:              calc(100% - 16px);
+                                    }
+
+                                    select {
+                                        border:             0;
+                                        border-radius:      4px;
+                                        margin-bottom:      2px;
+                                        padding:            4px 6px;
+                                        width:              100%;
+                                    }
+
+                                    textarea {
+                                        border:             0;
+                                        border-radius:      4px;
+                                        margin-bottom:      2px;
+                                        padding:            4px 6px 4px 10px;
+                                        width:              calc(100% - 16px);
+                                        resize:             vertical;
+                                    }
+
+                                }
+
+                            }
+
+                        }
+
+                        #connectButton {
+                            margin-top:     1vh;
+                            padding:        4px 14px;
+                            border:         0;
+                            border-radius:  3px;
+                        }
+
+                        #connectButton:hover {
+                            background-color:  #999999;
+                        }
+
+                        #connectButton:active {
+                            background-color:  #666666;
+                        }
+
+                    }
+
+                    #control {
+
+                        display:            flex;
+                        flex-direction:     row;
+                        pointer-events:     none;
+
+                        #buttons {
+
+                            display:            flex;
+                            flex-direction:     column;
+                            user-select:        none;
+
+                            button {
+                                padding:            3px 12px 2px 12px;
+                                margin-bottom:      2px;
+                            }
+
+                        }
+
+                        #commands {
+
+                            flex-grow:          1;
+
+                            .command {
+
+                                display:            none;
+                                padding:            10px 12px;
+                                border-radius:      8px;
+                                margin-left:        15px;
+                                background-color:   rgb(214, 214, 214);
+
+                                .description {
+                                    margin-bottom:      8px;
+                                    font-weight:        bold;
+                                }
+
+                                .properties {
+
+                                    display:            table;
+                                    width:              calc(100% - 14px);
+                                    margin-left:        10px;
+
+                                    .group {
+                                        display:            contents;
+                                    }
+
+                                    .collection {
+
+                                        display:            table-row-group;
+                                        margin-left:        15px;
+
+                                        .properties {
+                                            display:            block;
+                                        }
+
+                                    }
+
+                                    .row {
+
+                                        display:            table-row;
+
+                                        .key {
+                                            display:            table-cell;
+                                            padding-right:      20px;
+                                            white-space:        nowrap;
+                                        }
+
+                                        .value {
+
+                                            display:            table-cell;
+                                            width:              100%;
+
+                                            input {
+                                                border:             0;
+                                                border-radius:      4px;
+                                                margin-bottom:      2px;
+                                                padding:            4px 6px 4px 10px;
+                                                width:              calc(100% - 16px);
+                                            }
+
+                                            select {
+                                                border:             0;
+                                                border-radius:      4px;
+                                                margin-bottom:      2px;
+                                                padding:            4px 6px;
+                                                width:              100%;
+                                            }
+
+                                            textarea {
+                                                border:             0;
+                                                border-radius:      4px;
+                                                margin-bottom:      2px;
+                                                padding:            4px 6px 4px 10px;
+                                                width:              calc(100% - 16px);
+                                                resize:             vertical;
+                                            }
+
+                                            .addToCollectionButton {
+                                                display:            block;
+                                                margin-left:        auto;
+                                                margin-right:       0;
+                                            }
+
+                                        }
+
+                                    }
+
+                                    .mandatory {
+                                        .key {
+                                            font-weight:        bold;
+                                        }
+                                    }
+
+                                    .optional {
+                                        .key {
+                                            font-style:         italic;
+                                        }
+                                    }
+
+                                    .L2 {
+                                        .key {
+                                            padding-left:       15px;
+                                        }
+                                    }
+
+                                    .L3 {
+                                        .key {
+                                            padding-left:       30px;
+                                        }
+                                    }
+
+                                    .L4 {
+                                        .key {
+                                            padding-left:       45px;
+                                        }
+                                    }
+
+                                }
+
+                                .commandButton {
+                                    border:             0;
+                                    border-radius:      4px;
+                                    background-color:   #afafaf;
+                                    padding:            4px 8px;
+                                    margin-top:         8px;
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
